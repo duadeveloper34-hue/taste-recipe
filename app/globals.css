@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start: rgba(155, 154, 154, 0.8);
+  --background-end : rgba(156, 156, 156, 0.1);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: lab(65.9269 -0.832707 -8.17474);
+  --color-bg-primary: #008236;
+  --color-bg-secondary: lab(16.1051 -1.18239 -11.7533);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start: rgba(155, 154, 154, 0.8);
+    --background-end: rgba(156, 156, 156, 0.1);
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start)),
+      rgb(var(--background-end))
+    )
+    rgb(var(--background-start));
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A7D34;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E5D27;
+}
+
+/* Utility classes for gradients */
+.bg-linear-to-r {
+  background: linear-gradient(
+    to right,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+.bg-linear-to-l {
+  background: linear-gradient(
+    to left,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+.bg-linear-to-t {
+  background: linear-gradient(
+    to top,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+.bg-linear-to-b {
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
